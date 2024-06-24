@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorveteria Fatec</title>
+</head>
+<body>
+    <h1>Sorvetes!</h1>
+    <hr>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipos</th>
+                    <th> Sabores </th>
+                    <th> Valores </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="sorveteria:${sorveteria}">
+                    <td th:text="${sorveteria.tipo}">tipo</td>
+                    <td th:text="${sorveteria.sabor}">sabor </td>
+                    <td th:text="${sorveteria.valor}"> valor</td>
+                </tr>
+            </tbody>
+        </table>
+    
+    </body>
+</html>
